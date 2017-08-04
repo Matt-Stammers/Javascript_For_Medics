@@ -191,3 +191,60 @@ if (patient>veryHot){
 console.log(patientReport)
 
 // voila - this forms a much better way to print to the consle. We will see the value of this later on.
+
+// ok so now let's start on loops with the while loop - this is where having some prior programming experience will come in handy
+
+var = y
+
+while(y < 10){
+  console.log("y is currently: "+ y);
+  console.log("y is still less than 10, adding 1 to y");
+  y = y+1;
+}
+
+// see programming is easy ;) after 10 iterations the loop will break
+// ok no lets add a break
+
+var = y
+
+while(y < 10){
+  console.log("y is currently: "+ y);
+  if (y === 3) {
+    console.log("Y is now equal to 3 so we need a break")
+    break;
+  }
+  console.log("y is still less than 10, adding 1 to y");
+  y = y+1;
+}
+
+// here we go. the break clause literally prematurely breaks the loop - simples
+
+// before we move on note that now num = num + 1 will look like num++ or num += 1
+
+// ok so now let's try a basic JS for loop:
+
+for(var i = 0; i < 10; i++){
+  console.log("Number is: ": + i);
+}
+
+// often i is used in for loops, this is just convention. see how similar this is to the while loop but it just requires a few more conditions
+// ok so now lets use to code to iterate through a pre-existing array
+
+var clinDev = "Clinical_Developer" // this is our word we shall iterate through
+
+for(var i = 0; i < clinDev.length; i++){
+  console.log(clinDev[i]);
+}
+                      
+// voila, it is printed to the console
+// now let's try skipping every other letter
+
+var clinDev = "Clinical_Developer" // this is our word we shall iterate through
+
+for(var i = 0; i < clinDev.length; i= i+2){
+  console.log(clinDev[i]);
+}
+                      
+// aha it only printed half the letters this time
+
+// Well done guys, this concludes the first part of the JS_For_Medics Tutorial
