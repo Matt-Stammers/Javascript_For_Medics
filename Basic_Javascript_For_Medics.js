@@ -66,14 +66,14 @@ null
 // variable assignment
 // var varName = value; Note snake_casing is heavily discouraged so use camelCasing - see bwelow
 
-var bankBalance = "100";
-bankBalance // this will return 100
+var bankBalance = "10000";
+bankBalance // this will return 10000
 
 var name = "Clin_Dev: "
 name // this will return "Clin_Dev: "
 
 alert(name + bankBalance)
-// this will bring up another alert which says "Clin_Dev: 100" They are very useful to check your work
+// this will bring up another alert which says "Clin_Dev: 10000" They are very useful to check your work
 
 var blob // this will return undefined
 var blobby = null; // this will return null
@@ -92,7 +92,7 @@ var age = prompt("Enter your age: ")
 age // this will then call the prompt and return the value to the console
 
 // ok so lets create our first mini JS program that will run in the browser it will be a very simple kg -> lbs converter
-
+// you need an HTML file and then connect the seperate JS script (see youtube for this) in the order we want it to be executed
 var kg = prompt("Weight in kgs?");
 var lbs = kg/0.454;
 alert("That is: "+lb+" pounds");
@@ -102,12 +102,12 @@ console.log("Conversion Complete!");
 
 // ok so now some more on basic operators
 
-1 < 2 // is true
-1 > 2 // is false
-2 >= 2 // is true
+2 < 4 // is true
+5 > 6 // is false
+6 >= 6 // is true
 2 == 2 // is true BUT there is a quirk here
 
-// but what about this
+// so the above made sense but what about this
 
 "2" == 2 // RETURNS TRUE!!! This is very unusual, to fix it you add ===
 "2" === 2 // returns false now as you would expect. This is an example of type coercion
@@ -130,7 +130,64 @@ NaN == NaN // this will return false - again this is another quirk with JS
 
 // logical operators
 
-1 === 1 && 2 === 2; // AND returns true if both are true
-1 === 2 || 2 === 2; // OR returns true if either is true
-!(1 === 1) // NOT operator in this case will return false
-!!(1 === 1) // NOT operator in this case will return true! This is bad programming but it is functional
+8 === 8 && 99 === 99; // AND returns true if both are true
+99 === 2 || 2 === 2; // OR returns true if either is true
+!(4 === 4) // NOT operator in this case will return false
+!!(4 === 4) // NOT operator in this case will return true! This is bad programming but it is functional
+
+// If statements and control flow
+
+if(true){
+  console.log("Code is Running in the Console");
+}
+
+// ok so that was a very basic example lets make it a bit more complex
+
+var febrile = false;
+var patient = 36;
+var hot = 37.5;
+var veryHot = 39;
+
+if (patient>hot){
+  febrile = true;
+}else{
+  febrile = false;
+}
+
+console.log(febrile) // this will return false
+
+// ok so lets make this contain an else if:
+
+var febrile = false;
+var patient = 39;
+var hot = 37.5;
+var veryHot = 39;
+
+if (patient>veryHot){
+  console.log("The patient is very febrile");
+}else if (patient>= hot && patient <= veryHot{
+  console.log("The patient is febrile but not extremely so");
+}else{
+  console.log("The patient does not have a fever");
+}
+
+// This code will return the middle condition because the pt temp is just below the verHot condition
+// ok but how do we now combine the variable and control flow so we have an assigned variable
+
+var febrile = false;
+var patient = 39;
+var hot = 37.5;
+var veryHot = 39;
+var patientReport = "blank";
+
+if (patient>veryHot){
+  patientReport = "The patient is very febrile";
+}else if (patient>= hot && patient <= veryHot{
+  patientReport = "The patient is febrile but not extremely so");
+}else{
+  patientReport = "The patient does not have a fever";
+}
+
+console.log(patientReport)
+
+// voila - this forms a much better way to print to the consle. We will see the value of this later on.
