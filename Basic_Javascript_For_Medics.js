@@ -30,7 +30,7 @@ false
 undefined
 null
 
-// basic operators
+// basic math operators
 // sum, subract, mult, divide, exponentiation & multiply all apply the same as per python
 // try them out in the consule in the developer environment of your chrome browser go to settings, more tools and dev tools to get this up
 // or you can use an alternative JS programming environment
@@ -91,3 +91,46 @@ prompt("Enter your age: ") // This will output to the browser with a text dialog
 var age = prompt("Enter your age: ") 
 age // this will then call the prompt and return the value to the console
 
+// ok so lets create our first mini JS program that will run in the browser it will be a very simple kg -> lbs converter
+
+var kg = prompt("Weight in kgs?");
+var lbs = kg/0.454;
+alert("That is: "+lb+" pounds");
+console.log("Conversion Complete!");
+
+// see JS is nice and simple ;)
+
+// ok so now some more on basic operators
+
+1 < 2 // is true
+1 > 2 // is false
+2 >= 2 // is true
+2 == 2 // is true BUT there is a quirk here
+
+// but what about this
+
+"2" == 2 // RETURNS TRUE!!! This is very unusual, to fix it you add ===
+"2" === 2 // returns false now as you would expect. This is an example of type coercion
+
+// the same is true of inequality:
+
+"5" != 5 // false
+"5" !== 5 // true
+
+// some more examples
+
+true == 1: // returns true
+true === 1 // returns false
+
+// null, NaN and undefined
+
+null == undefined // this is true
+null === undefined // this is false
+NaN == NaN // this will return false - again this is another quirk with JS
+
+// logical operators
+
+1 === 1 && 2 === 2; // AND returns true if both are true
+1 === 2 || 2 === 2; // OR returns true if either is true
+!(1 === 1) // NOT operator in this case will return false
+!!(1 === 1) // NOT operator in this case will return true! This is bad programming but it is functional
