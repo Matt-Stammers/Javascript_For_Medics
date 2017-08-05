@@ -42,3 +42,98 @@ function timesTen(num) {
 
 // when you call it in the console or say var result = timesTen(10), then request result you will get 100
 // note the scope of times is local only to the function
+
+// ok so let's move onto arrays now
+// say we wanted to store some variables in a much more convenient fashion
+// arrays, like python lists are a great way to achieve this
+
+var clinDev1 = "Frontend"
+var clinDev2 = "Backend"
+var clinDev3 = "Data Science"
+
+// the above is not in an array, so lets make one
+
+var clinDevs = ["Frontend", "Backend", "Data Science"]
+
+// there you go they are all stored in an array now
+// indexing again starts at 0 as per string indexing.
+
+clinDevs[2] // will return Data Science
+
+// note ararys in JS are mutable
+// so...
+
+clinDevs[1]= "UX"
+
+// this has now changed backend to ux in the array
+
+// however
+
+clinDev2[0] = "P"
+
+// this will not work as strings are immutable in JS
+// arrays in JS can take in anything:
+
+var funArray = [20, "70", false]
+funArray.length
+
+// arrays will return the length as the number of items, in this case 3.
+// how do we remove an item from an array?
+
+funArray.pop()
+
+// this will remove the last value from the array
+
+funArray.push(true)
+
+// this will achieve the opposite
+// arrays can also be nested like python lists
+
+var matrixArray = [[1,2,3],[1,2,3],[1,2,3]]
+
+// this has length 3 so don't be fooled
+// iterating through arrays
+
+for(var i = 0;i<arr.length;i++){
+  console.log(arr[i]);
+}
+
+// this is one way to do it
+// or you can use:
+
+for (number of arr){
+  console.log(letter);
+}
+
+// nice, note that if you want to manipulate the for of loop you can do the following:
+
+for (number of arr){
+  console.log("Welcome Clin_Dev");
+}
+
+// this will instead print "Welcome Clin_Dev" to the console 4 times
+// or if you wanted to do an alert:
+
+for (letter of arr){
+  alert(letter);
+}
+
+// or:
+
+arr.forEach(alert); // aha, an even more efficient built in method!
+// ok so another example of this
+
+function addGreat(name){
+  console.log(name+" is Great!");
+}
+
+addGreat("JS")
+
+// this will return "JS is Great"
+// but let's now combine the function call with an array to make it even more powerful
+
+var languages = ["Python", "JS", "R"]
+languages.forEach(addGreat)
+
+// haha, now we're cooking on gas - this process is much more scalable than tediously writing out each function call
+// finally we need to talk about JS objects
