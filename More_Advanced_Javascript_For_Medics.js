@@ -136,4 +136,69 @@ var languages = ["Python", "JS", "R"]
 languages.forEach(addGreat)
 
 // haha, now we're cooking on gas - this process is much more scalable than tediously writing out each function call
-// finally we need to talk about JS objects
+
+// finally we need to talk about JS objects - they are similar to dictionary 'objects' in other languages
+
+var carInfo = {make:"Ford",year:2000, model"Focus"}:
+carInfo["make"]
+
+// when you call the object you need to reference it as a string. This is different to in Python
+
+var myObject = {a:"Yo", b:[2,3,4],c:{inside:['a','c']}};
+myObject['b'][1]
+myObject['c']['inside'][0]
+
+// this will return 3 and 'a' once again nesting can occur at multiple levels
+// ok lets change one
+
+var myObject = {a:"Yo", b:[2,3,4],c:{inside:['a','c']}};
+myObject['b'][1] = 100
+myObject['b'][1] += 1
+
+// this will first change the 3 contained in 'b' to 100 and then increment it by one
+// this will only work on a number
+// to show the whole object call:
+
+console.dir(myObject)
+
+// this can then be expanded.
+// ok so iterating through - note they are inherently unordered like in Python
+
+for (key in myObject){
+  console.log(key);
+}
+
+// doesn't actually have to be key, could be any letter but key is readable
+// to acces the items as well:
+
+for (key in myObject){
+  console.log(key);
+  console.log(myObject[k]);
+}
+
+// viola. Ok so now on to an even cooler topic - object methods
+// these are functions effectively within an object!
+
+var basic = {
+  property : "Hello",
+  myMethod: function(){
+    console.log("The myMethod was called")
+  }
+}
+
+// if you call this alone it won't work but you can see the method within basic
+
+basic.myMethod()
+
+// this will now execute the function and say that the myMethod was called.
+// however we need to add this:
+
+var myObj = {
+  name : "Matt"
+  greet: function(){
+    console.log("Hello " + this.name)}}
+    
+myObj.greet()
+
+// Woohoo, it's working - you now know all you need to know to get started with JS in frontend web-development
+  
